@@ -12,3 +12,11 @@ html{
 body{
   font-size: 1.6rem;
 }
+
+.container{
+  max-width: 120rem;
+  margin: 0 auto;
+  border-left: 1px solid red;
+  border-right: 1px solid red;
+  padding: 0 1.5rem;
+}
