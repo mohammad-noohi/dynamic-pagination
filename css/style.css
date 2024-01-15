@@ -3,6 +3,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: sans-serif;
 }
 
 html{
@@ -11,13 +12,62 @@ html{
 
 body{
   font-size: 1.6rem;
-  background-color: lightblue;
+  margin-top: 50px;
 }
 
-.container{
-  max-width: 140rem;
-  margin: 0 auto;
-  border-left: 1px solid red;
-  border-right: 1px solid red;
-  padding: 0 1.5rem;
+ul,ol,dl{
+  list-style-type: none;
 }
+
+a{
+  text-decoration: none;
+  color: #000;
+}
+
+/* pagination style */
+.pagination-wrapper,.pages{
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+
+
+.page-link{
+  padding: 1rem;
+  font-size: 18px;
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* active page( current page ) */
+.page-link.active{
+  background-color: rgb(31, 31, 31);
+  color: #fff;
+  border-radius: 50%;
+}
+
+.btn{
+  border: 1px solid #aaa;
+  background-color: #eee;
+  border-radius: 0.8rem;
+  transition: all 200ms linear;
+}
+
+.btn:hover{
+  background-color: #dfdfdf;
+}
+
+.prev-page-btn{
+
+}
+
+.next-page-btn{
+
+}
+
+
+
