@@ -71,7 +71,7 @@ function paginationGen(allPages, currentPage) {
 
   // get all pages links
   pagesLinks = $.querySelectorAll(".pages .page-link");
-  console.log(pagesLinks)
+  console.log(pagesLinks);
 }
 
 // first generation
@@ -80,25 +80,32 @@ paginationGen(allPages, currentPage);
 // click on prev button( go to previous page )
 prevPageBtn.addEventListener("click", () => {
   currentPage -= 1;
-  paginationGen(allPages, currentPage);
+  if (currentPage >= 1) {
+    paginationGen(allPages, currentPage);
+  }
 });
 // click on next button ( go to next page )
 nextPageBtn.addEventListener("click", () => {
   currentPage += 1;
-  paginationGen(allPages,currentPage)
+  if (currentPage <= allPages) {
+    paginationGen(allPages, currentPage);
+  }
 });
 
-
 //click on each page link
-function pageLinksClick(thisLink){
+function pageLinksClick(thisLink) {
   let newPage = Number(thisLink.innerHTML);
-  if(newPage > currentPage){
-    currentPage += 1 ;
-    paginationGen(allPages,currentPage)
+  if (newPage > currentPage) {
+    currentPage += 1;
+    if (currentPage <= allPages) {
+      paginationGen(allPages, currentPage);
+    }
   }
 
-  if(newPage < currentPage){
-    currentPage -= 1 ;
-    paginationGen(allPages,currentPage)
+  if (newPage < currentPage) {
+    currentPage -= 1;
+    if (currentPage >= 1) {
+      paginationGen(allPages, currentPage);
+    }
   }
 }
